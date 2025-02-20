@@ -1,0 +1,78 @@
+root@hpc117:~/project/hpc/ior# mpirun -np 10 /root/project/hpc/ior/install/bin/ior -a POSIX -b 100M -t 1M -v -W -w -r -R -i 1 -o /tmp/sxb/testfile
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Feb 18 20:12:23 2025
+Command line        : /root/project/hpc/ior/install/bin/ior -a POSIX -b 100M -t 1M -v -W -w -r -R -i 1 -o /tmp/sxb/testfile
+Machine             : Linux hpc117
+TestID              : 0
+StartTime           : Tue Feb 18 20:12:23 2025
+Path                : /tmp/sxb/testfile
+FS                  : 3.7 GiB   Used FS: 5.8%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/sxb/testfile
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 10
+clients per node    : 10
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 100 MiB
+aggregate filesize  : 1000 MiB
+verbose             : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     474.49     474.62     0.021069    102400     1024.00    0.000736   2.11       0.000116   2.11       0   
+Verifying contents of the file(s) just written.
+Tue Feb 18 20:12:25 2025
+
+read      12187      12385      0.000806    102400     1024.00    0.001348   0.080743   0.000156   0.082052   0   
+remove    -          -          -           -          -          -          -          -          0.000907   0   
+Max Write: 474.49 MiB/sec (497.54 MB/sec)
+Max Read:  12187.39 MiB/sec (12779.41 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         474.49     474.49     474.49       0.00     474.49     474.49     474.49       0.00    2.10754         NA            NA     0     10  10    1   0     0        1         0    0      1 104857600  1048576    1000.0 POSIX      0
+read        12187.39   12187.39   12187.39       0.00   12187.39   12187.39   12187.39       0.00    0.08205         NA            NA     0     10  10    1   0     0        1         0    0      1 104857600  1048576    1000.0 POSIX      0
+Finished            : Tue Feb 18 20:12:26 2025
+root@hpc117:~/project/hpc/ior# 
+
+
+
+
+root@hpc117:~/project/hpc/ior# mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a POSIX -z 0 -F -C -i 1 -n 3334 -e 4096 -d /tmp/sxb/ -w 4096
+-- started at 02/18/2025 20:23:17 --
+
+mdtest-4.1.0+dev was launched with 10 total task(s) on 1 node(s)
+Command line used: /root/project/hpc/ior/install/bin/mdtest '-a' 'POSIX' '-z' '0' '-F' '-C' '-i' '1' '-n' '3334' '-e' '4096' '-d' '/tmp/sxb/' '-w' '4096'
+Nodemap: 1111111111
+Path                : /tmp/sxb/
+FS                  : 3.7 GiB   Used FS: 3.2%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+10 tasks, 33340 files
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                1443.988       1443.988       1443.988          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                2109.811       2109.811       2109.811          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 02/18/2025 20:23:41 --
+
+root@hpc117:~/project/hpc/ior# 
+
+
