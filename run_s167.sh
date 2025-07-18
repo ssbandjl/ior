@@ -17,6 +17,8 @@ mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a POSIX -z 0 -F -C -i 1 
 
 test_log:
 dmg sys query -v
+
+
 root@hpc167:~/project/hpc/ior/build# mkdir -p /tmp/sxb; dfuse --mountpoint=/tmp/sxb --pool=sxb --cont=sxb; df -h
 Filesystem      Size  Used Avail Use% Mounted on
 udev             32G     0   32G   0% /dev
@@ -42,6 +44,8 @@ tmpfs            32G     0   32G   0% /sys/fs/cgroup
 /dev/nvme0n1p1  511M  6.1M  505M   2% /boot/efi
 tmpfs           6.3G     0  6.3G   0% /run/user/0
 dfuse           3.8G  2.2G  1.7G  57% /tmp/sxb
+
+
 root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/ior -a POSIX -b 10M -t 1M -v -W -w -r -R -i 1 -o /tmp/sxb/testfile
 IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
 Began               : Fri Jul 18 16:11:05 2025
@@ -91,6 +95,9 @@ Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mea
 write         284.17     284.17     284.17       0.00     284.17     284.17     284.17       0.00    0.35190         NA            NA     0     10  10    1   0     0        1         0    0      1 10485760  1048576     100.0 POSIX      0
 read        11530.10   11530.10   11530.10       0.00   11530.10   11530.10   11530.10       0.00    0.00867         NA            NA     0     10  10    1   0     0        1         0    0      1 10485760  1048576     100.0 POSIX      0
 Finished            : Fri Jul 18 16:11:05 2025
+
+
+
 root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a POSIX -z 0 -F -C -i 1 -n 3334 -e 4096 -d /tmp/sxb/ -w 4096
 -- started at 07/18/2025 16:11:20 --
 
