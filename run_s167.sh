@@ -51,6 +51,8 @@ root@hpc167:~/project/hpc/ior/build# which mpirun
 
 
 rm -rf /tmp/sxb/*
+# REF: https://cloud.tencent.com/developer/article/2492993, args: src/parse_options.c -> createGlobalOptions
+
 root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/ior -a POSIX -b 10M -t 1M -v -W -w -r -R -i 1 -o /tmp/sxb/testfile
 IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
 Began               : Fri Jul 18 16:11:05 2025
