@@ -1,0 +1,140 @@
+Making all in src
+make  all-recursive
+Making all in .
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-md-workbench-main.o -MD -MP -MF .deps/md_workbench-md-workbench-main.Tpo -c -o md_workbench-md-workbench-main.o `test -f 'md-workbench-main.c' || echo '../../src/'`md-workbench-main.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-ior-main.o -MD -MP -MF .deps/ior-ior-main.Tpo -c -o ior-ior-main.o `test -f 'ior-main.c' || echo '../../src/'`ior-main.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori.o -MD -MP -MF .deps/ior-aiori.Tpo -c -o ior-aiori.o `test -f 'aiori.c' || echo '../../src/'`aiori.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori-DUMMY.o -MD -MP -MF .deps/ior-aiori-DUMMY.Tpo -c -o ior-aiori-DUMMY.o `test -f 'aiori-DUMMY.c' || echo '../../src/'`aiori-DUMMY.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori-MPIIO.o -MD -MP -MF .deps/ior-aiori-MPIIO.Tpo -c -o ior-aiori-MPIIO.o `test -f 'aiori-MPIIO.c' || echo '../../src/'`aiori-MPIIO.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori-MMAP.o -MD -MP -MF .deps/ior-aiori-MMAP.Tpo -c -o ior-aiori-MMAP.o `test -f 'aiori-MMAP.c' || echo '../../src/'`aiori-MMAP.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori-POSIX.o -MD -MP -MF .deps/ior-aiori-POSIX.Tpo -c -o ior-aiori-POSIX.o `test -f 'aiori-POSIX.c' || echo '../../src/'`aiori-POSIX.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT ior-aiori-DFS.o -MD -MP -MF .deps/ior-aiori-DFS.Tpo -c -o ior-aiori-DFS.o `test -f 'aiori-DFS.c' || echo '../../src/'`aiori-DFS.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-ior.o -MD -MP -MF .deps/libaiori_a-ior.Tpo -c -o libaiori_a-ior.o `test -f 'ior.c' || echo '../../src/'`ior.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-mdtest.o -MD -MP -MF .deps/libaiori_a-mdtest.Tpo -c -o libaiori_a-mdtest.o `test -f 'mdtest.c' || echo '../../src/'`mdtest.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-utilities.o -MD -MP -MF .deps/libaiori_a-utilities.Tpo -c -o libaiori_a-utilities.o `test -f 'utilities.c' || echo '../../src/'`utilities.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-parse_options.o -MD -MP -MF .deps/libaiori_a-parse_options.Tpo -c -o libaiori_a-parse_options.o `test -f 'parse_options.c' || echo '../../src/'`parse_options.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-ior-output.o -MD -MP -MF .deps/libaiori_a-ior-output.Tpo -c -o libaiori_a-ior-output.o `test -f 'ior-output.c' || echo '../../src/'`ior-output.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-md-workbench.o -MD -MP -MF .deps/libaiori_a-md-workbench.Tpo -c -o libaiori_a-md-workbench.o `test -f 'md-workbench.c' || echo '../../src/'`md-workbench.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori.o -MD -MP -MF .deps/libaiori_a-aiori.Tpo -c -o libaiori_a-aiori.o `test -f 'aiori.c' || echo '../../src/'`aiori.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori-DUMMY.o -MD -MP -MF .deps/libaiori_a-aiori-DUMMY.Tpo -c -o libaiori_a-aiori-DUMMY.o `test -f 'aiori-DUMMY.c' || echo '../../src/'`aiori-DUMMY.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori-MPIIO.o -MD -MP -MF .deps/libaiori_a-aiori-MPIIO.Tpo -c -o libaiori_a-aiori-MPIIO.o `test -f 'aiori-MPIIO.c' || echo '../../src/'`aiori-MPIIO.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori-MMAP.o -MD -MP -MF .deps/libaiori_a-aiori-MMAP.Tpo -c -o libaiori_a-aiori-MMAP.o `test -f 'aiori-MMAP.c' || echo '../../src/'`aiori-MMAP.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori-POSIX.o -MD -MP -MF .deps/libaiori_a-aiori-POSIX.Tpo -c -o libaiori_a-aiori-POSIX.o `test -f 'aiori-POSIX.c' || echo '../../src/'`aiori-POSIX.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT libaiori_a-aiori-DFS.o -MD -MP -MF .deps/libaiori_a-aiori-DFS.Tpo -c -o libaiori_a-aiori-DFS.o `test -f 'aiori-DFS.c' || echo '../../src/'`aiori-DFS.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-mdtest-main.o -MD -MP -MF .deps/mdtest-mdtest-main.Tpo -c -o mdtest-mdtest-main.o `test -f 'mdtest-main.c' || echo '../../src/'`mdtest-main.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori.o -MD -MP -MF .deps/mdtest-aiori.Tpo -c -o mdtest-aiori.o `test -f 'aiori.c' || echo '../../src/'`aiori.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori-DUMMY.o -MD -MP -MF .deps/mdtest-aiori-DUMMY.Tpo -c -o mdtest-aiori-DUMMY.o `test -f 'aiori-DUMMY.c' || echo '../../src/'`aiori-DUMMY.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori-MPIIO.o -MD -MP -MF .deps/mdtest-aiori-MPIIO.Tpo -c -o mdtest-aiori-MPIIO.o `test -f 'aiori-MPIIO.c' || echo '../../src/'`aiori-MPIIO.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori-MMAP.o -MD -MP -MF .deps/mdtest-aiori-MMAP.Tpo -c -o mdtest-aiori-MMAP.o `test -f 'aiori-MMAP.c' || echo '../../src/'`aiori-MMAP.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori-POSIX.o -MD -MP -MF .deps/mdtest-aiori-POSIX.Tpo -c -o mdtest-aiori-POSIX.o `test -f 'aiori-POSIX.c' || echo '../../src/'`aiori-POSIX.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT mdtest-aiori-DFS.o -MD -MP -MF .deps/mdtest-aiori-DFS.Tpo -c -o mdtest-aiori-DFS.o `test -f 'aiori-DFS.c' || echo '../../src/'`aiori-DFS.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori.o -MD -MP -MF .deps/md_workbench-aiori.Tpo -c -o md_workbench-aiori.o `test -f 'aiori.c' || echo '../../src/'`aiori.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori-DUMMY.o -MD -MP -MF .deps/md_workbench-aiori-DUMMY.Tpo -c -o md_workbench-aiori-DUMMY.o `test -f 'aiori-DUMMY.c' || echo '../../src/'`aiori-DUMMY.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori-MPIIO.o -MD -MP -MF .deps/md_workbench-aiori-MPIIO.Tpo -c -o md_workbench-aiori-MPIIO.o `test -f 'aiori-MPIIO.c' || echo '../../src/'`aiori-MPIIO.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori-MMAP.o -MD -MP -MF .deps/md_workbench-aiori-MMAP.Tpo -c -o md_workbench-aiori-MMAP.o `test -f 'aiori-MMAP.c' || echo '../../src/'`aiori-MMAP.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori-POSIX.o -MD -MP -MF .deps/md_workbench-aiori-POSIX.Tpo -c -o md_workbench-aiori-POSIX.o `test -f 'aiori-POSIX.c' || echo '../../src/'`aiori-POSIX.c
+mpicc -DHAVE_CONFIG_H -I. -I../../src       -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT md_workbench-aiori-DFS.o -MD -MP -MF .deps/md_workbench-aiori-DFS.Tpo -c -o md_workbench-aiori-DFS.o `test -f 'aiori-DFS.c' || echo '../../src/'`aiori-DFS.c
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from ../../src/aiori-DFS.c:19:
+/usr/include/features.h:187:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+  187 | # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+      |   ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from ../../src/aiori-DFS.c:19:
+/usr/include/features.h:187:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+  187 | # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+      |   ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from ../../src/aiori-DFS.c:19:
+/usr/include/features.h:187:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+  187 | # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+      |   ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from ../../src/aiori-DFS.c:19:
+/usr/include/features.h:187:3: warning: #warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE" [-Wcpp]
+  187 | # warning "_BSD_SOURCE and _SVID_SOURCE are deprecated, use _DEFAULT_SOURCE"
+      |   ^~~~~~~
+mv -f .deps/md_workbench-md-workbench-main.Tpo .deps/md_workbench-md-workbench-main.Po
+mv -f .deps/ior-ior-main.Tpo .deps/ior-ior-main.Po
+mv -f .deps/mdtest-mdtest-main.Tpo .deps/mdtest-mdtest-main.Po
+../../src/mdtest.c: In function ‘phase_prepare’:
+../../src/mdtest.c:286:5: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+  286 |     system(o.prologue);
+      |     ^~~~~~~~~~~~~~~~~~
+mv -f .deps/md_workbench-aiori-MMAP.Tpo .deps/md_workbench-aiori-MMAP.Po
+../../src/mdtest.c: In function ‘phase_end’:
+../../src/mdtest.c:302:5: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+  302 |     system(o.epilogue);
+      |     ^~~~~~~~~~~~~~~~~~
+mv -f .deps/mdtest-aiori-MMAP.Tpo .deps/mdtest-aiori-MMAP.Po
+mv -f .deps/libaiori_a-aiori-MMAP.Tpo .deps/libaiori_a-aiori-MMAP.Po
+mv -f .deps/ior-aiori-MMAP.Tpo .deps/ior-aiori-MMAP.Po
+mv -f .deps/ior-aiori-DUMMY.Tpo .deps/ior-aiori-DUMMY.Po
+mv -f .deps/mdtest-aiori-DUMMY.Tpo .deps/mdtest-aiori-DUMMY.Po
+mv -f .deps/md_workbench-aiori-DUMMY.Tpo .deps/md_workbench-aiori-DUMMY.Po
+mv -f .deps/libaiori_a-aiori-DUMMY.Tpo .deps/libaiori_a-aiori-DUMMY.Po
+mv -f .deps/ior-aiori.Tpo .deps/ior-aiori.Po
+mv -f .deps/md_workbench-aiori.Tpo .deps/md_workbench-aiori.Po
+mv -f .deps/libaiori_a-aiori.Tpo .deps/libaiori_a-aiori.Po
+mv -f .deps/mdtest-aiori.Tpo .deps/mdtest-aiori.Po
+mv -f .deps/ior-aiori-POSIX.Tpo .deps/ior-aiori-POSIX.Po
+mv -f .deps/mdtest-aiori-POSIX.Tpo .deps/mdtest-aiori-POSIX.Po
+mv -f .deps/md_workbench-aiori-POSIX.Tpo .deps/md_workbench-aiori-POSIX.Po
+mv -f .deps/libaiori_a-aiori-POSIX.Tpo .deps/libaiori_a-aiori-POSIX.Po
+mv -f .deps/libaiori_a-aiori-MPIIO.Tpo .deps/libaiori_a-aiori-MPIIO.Po
+mv -f .deps/libaiori_a-parse_options.Tpo .deps/libaiori_a-parse_options.Po
+mv -f .deps/ior-aiori-MPIIO.Tpo .deps/ior-aiori-MPIIO.Po
+mv -f .deps/md_workbench-aiori-MPIIO.Tpo .deps/md_workbench-aiori-MPIIO.Po
+mv -f .deps/libaiori_a-ior-output.Tpo .deps/libaiori_a-ior-output.Po
+mv -f .deps/mdtest-aiori-MPIIO.Tpo .deps/mdtest-aiori-MPIIO.Po
+mv -f .deps/libaiori_a-utilities.Tpo .deps/libaiori_a-utilities.Po
+mv -f .deps/libaiori_a-aiori-DFS.Tpo .deps/libaiori_a-aiori-DFS.Po
+mv -f .deps/ior-aiori-DFS.Tpo .deps/ior-aiori-DFS.Po
+mv -f .deps/md_workbench-aiori-DFS.Tpo .deps/md_workbench-aiori-DFS.Po
+../../src/ior.c: In function ‘GetPlatformName’:
+../../src/ior.c:586:35: warning: ‘%s’ directive writing up to 1023 bytes into a region of size between 0 and 1023 [-Wformat-overflow=]
+  586 |         sprintf(platformName, "%s(%s)", nodeName, sysName);
+      |                                   ^~              ~~~~~~~
+In file included from /usr/include/stdio.h:867,
+                 from ../../src/ior.c:15:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:36:10: note: ‘__builtin___sprintf_chk’ output between 3 and 2049 bytes into a destination of size 1024
+   36 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |       __bos (__s), __fmt, __va_arg_pack ());
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mv -f .deps/mdtest-aiori-DFS.Tpo .deps/mdtest-aiori-DFS.Po
+../../src/ior.c: In function ‘GetTestFileName’:
+../../src/ior.c:649:37: warning: ‘%s’ directive writing up to 4095 bytes into a region of size 1024 [-Wformat-overflow=]
+  649 |                 sprintf(tmpString, "%s%d/%s",initialTestFileName, socket, "data");
+      |                                     ^~       ~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:867,
+                 from ../../src/ior.c:15:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:36:10: note: ‘__builtin___sprintf_chk’ output between 7 and 4112 bytes into a destination of size 1024
+   36 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |       __bos (__s), __fmt, __va_arg_pack ());
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mv -f .deps/libaiori_a-md-workbench.Tpo .deps/libaiori_a-md-workbench.Po
+mv -f .deps/libaiori_a-ior.Tpo .deps/libaiori_a-ior.Po
+mv -f .deps/libaiori_a-mdtest.Tpo .deps/libaiori_a-mdtest.Po
+rm -f libaiori.a
+ar cru libaiori.a libaiori_a-ior.o libaiori_a-mdtest.o libaiori_a-utilities.o libaiori_a-parse_options.o libaiori_a-ior-output.o libaiori_a-option.o libaiori_a-md-workbench.o libaiori_a-aiori.o libaiori_a-aiori-DUMMY.o     libaiori_a-aiori-MPIIO.o  libaiori_a-aiori-MMAP.o libaiori_a-aiori-POSIX.o     libaiori_a-aiori-DFS.o      
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libaiori.a
+mpicc  -g -O2      -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -L/root/project/stor/daos/install/lib64 -Wl,--enable-new-dtags -Wl,-rpath=/root/project/stor/daos/install/lib64 -o ior ior-ior-main.o ior-aiori.o ior-aiori-DUMMY.o     ior-aiori-MPIIO.o  ior-aiori-MMAP.o ior-aiori-POSIX.o     ior-aiori-DFS.o      libaiori.a           -lgurt -ldaos_common -ldaos -ldfs -luuid       -ldfs -ldaos -luuid -lgurt -lm 
+mpicc  -g -O2      -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -L/root/project/stor/daos/install/lib64 -Wl,--enable-new-dtags -Wl,-rpath=/root/project/stor/daos/install/lib64 -o mdtest mdtest-mdtest-main.o mdtest-aiori.o mdtest-aiori-DUMMY.o     mdtest-aiori-MPIIO.o  mdtest-aiori-MMAP.o mdtest-aiori-POSIX.o     mdtest-aiori-DFS.o      libaiori.a           -lgurt -ldaos_common -ldaos -ldfs -luuid       -ldfs -ldaos -luuid -lgurt -lm 
+mpicc  -g -O2      -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -L/root/project/stor/daos/install/lib64 -Wl,--enable-new-dtags -Wl,-rpath=/root/project/stor/daos/install/lib64 -o md-workbench md_workbench-md-workbench-main.o md_workbench-aiori.o md_workbench-aiori-DUMMY.o     md_workbench-aiori-MPIIO.o  md_workbench-aiori-MMAP.o md_workbench-aiori-POSIX.o     md_workbench-aiori-DFS.o      libaiori.a           -lgurt -ldaos_common -ldaos -ldfs -luuid       -ldfs -ldaos -luuid -lgurt -lm 
+Making all in test
+make[3]: Nothing to be done for 'all'.
+Making all in doc
+make[1]: Nothing to be done for 'all'.
+Making all in contrib
+depbase=`echo cbif.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+mpicc -DHAVE_CONFIG_H -I. -I../../contrib -I../src   -Icheck/include -Icheck/include -I/root/project/stor/daos/install/include  -g -O2 -MT cbif.o -MD -MP -MF $depbase.Tpo -c -o cbif.o ../../contrib/cbif.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mpicc  -g -O2  -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -Lcheck/lib64 -Lcheck/lib -Wl,--enable-new-dtags -Wl,-rpath=check/lib64:check/lib -L/root/project/stor/daos/install/lib64 -Wl,--enable-new-dtags -Wl,-rpath=/root/project/stor/daos/install/lib64 -o cbif cbif.o  -ldfs -ldaos -luuid -lgurt -lm 
+make[1]: Nothing to be done for 'all-am'.

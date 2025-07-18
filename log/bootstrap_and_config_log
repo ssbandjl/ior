@@ -1,0 +1,157 @@
+root@hpc167:~/project/hpc/ior# ./bootstrap
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I config
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+autoreconf: Leaving directory `.'
+root@hpc167:~/project/hpc/ior# mkdir build;cd build
+mkdir: cannot create directory ‘build’: File exists
+root@hpc167:~/project/hpc/ior/build# ../configure --with-daos=/root/project/stor/daos/install --prefix=/root/project/hpc/ior/install
+checking metadata... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports the include directive... yes (GNU style)
+checking for mpicc... mpicc
+checking for gcc... (cached) mpicc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether mpicc accepts -g... yes
+checking for mpicc option to accept ISO C89... none needed
+checking whether mpicc understands -c and -o together... yes
+checking dependency style of mpicc... gcc3
+checking for function MPI_Init... yes
+checking for mpi.h... yes
+checking for ranlib... ranlib
+checking for mpicc option to accept ISO C99... none needed
+checking how to run the C preprocessor... mpicc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/param.h... (cached) yes
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking for unistd.h... (cached) yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking hdfs.h usability... no
+checking hdfs.h presence... no
+checking for hdfs.h... no
+checking beegfs/beegfs.h usability... no
+checking beegfs/beegfs.h presence... no
+checking for beegfs/beegfs.h... no
+checking for size_t... yes
+checking for MPI_Count... yes
+checking for sysconf... yes
+checking for gettimeofday... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for pow... no
+checking for putenv... yes
+checking for realpath... yes
+checking for regcomp... yes
+checking for sqrt... no
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for uname... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for MPI_File_read_c... no
+checking for library containing sqrt... -lm
+checking gpfs.h usability... no
+checking gpfs.h presence... no
+checking for gpfs.h... no
+checking gpfs_fcntl.h usability... no
+checking gpfs_fcntl.h presence... no
+checking for gpfs_fcntl.h... no
+checking cuda_runtime.h usability... no
+checking cuda_runtime.h presence... no
+checking for cuda_runtime.h... no
+checking cufile.h usability... no
+checking cufile.h presence... no
+checking for cufile.h... no
+checking for nvcc... no
+checking for dummy... no
+checking for nvcc... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking gurt/common.h usability... yes
+checking gurt/common.h presence... yes
+checking for gurt/common.h... yes
+checking daos.h usability... yes
+checking daos.h presence... yes
+checking for daos.h... yes
+checking for d_hash_murmur64 in -lgurt... yes
+checking for uuid_generate in -luuid... yes
+checking for daos_init in -ldaos... yes
+checking for dfs_mkdir in -ldfs... yes
+checking for Gfarm file system... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for CHFS... no
+checking for FINCHFS... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/test/Makefile
+config.status: creating contrib/Makefile
+config.status: creating doc/Makefile
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+config.status: executing depfiles commands
+

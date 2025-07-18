@@ -1,0 +1,22 @@
+Making install in src
+Making install in .
+ /usr/bin/mkdir -p '/root/project/hpc/ior/install/bin'
+  /usr/bin/install -c ior mdtest md-workbench '/root/project/hpc/ior/install/bin'
+ /usr/bin/mkdir -p '/root/project/hpc/ior/install/lib'
+ /usr/bin/install -c -m 644  libaiori.a '/root/project/hpc/ior/install/lib'
+ ( cd '/root/project/hpc/ior/install/lib' && ranlib libaiori.a )
+make[3]: Nothing to be done for 'install-data-am'.
+Making install in test
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+Making install in doc
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/root/project/hpc/ior/install/share'
+ /usr/bin/install -c -m 644 ../../doc/USER_GUIDE '/root/project/hpc/ior/install/share'
+ /usr/bin/mkdir -p '/root/project/hpc/ior/install/share/man/man1'
+ /usr/bin/install -c -m 644 ../../doc/mdtest.1 '/root/project/hpc/ior/install/share/man/man1'
+Making install in contrib
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
