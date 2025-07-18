@@ -46,6 +46,11 @@ tmpfs           6.3G     0  6.3G   0% /run/user/0
 dfuse           3.8G  2.2G  1.7G  57% /tmp/sxb
 
 
+root@hpc167:~/project/hpc/ior/build# which mpirun
+/root/project/hpc/mpi/daos/mpich-3.4.3/install/bin/mpirun
+
+
+rm -rf /tmp/sxb/*
 root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/ior -a POSIX -b 10M -t 1M -v -W -w -r -R -i 1 -o /tmp/sxb/testfile
 IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
 Began               : Fri Jul 18 16:11:05 2025
@@ -97,8 +102,9 @@ read        11530.10   11530.10   11530.10       0.00   11530.10   11530.10   11
 Finished            : Fri Jul 18 16:11:05 2025
 
 
-
+rm -rf /tmp/sxb/*
 root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a POSIX -z 0 -F -C -i 1 -n 3334 -e 4096 -d /tmp/sxb/ -w 4096
+
 -- started at 07/18/2025 16:11:20 --
 
 mdtest-4.1.0+dev was launched with 10 total task(s) on 1 node(s)
@@ -119,9 +125,30 @@ SUMMARY rate (in ops/sec): (of 1 iterations)
    Tree removal                    0.000          0.000          0.000          0.000
 -- finished at 07/18/2025 16:11:49 --
 
-root@hpc167:~/project/hpc/ior/build# 
 
+rm -rf /tmp/sxb/*
+root@hpc167:~/project/hpc/ior/build# mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a POSIX -z 0 -F -C -r -t -R -i 1 -n 3334 -e 4096 -w 4096 -d /tmp/sxb/
+-- started at 07/18/2025 16:29:45 --
 
+mdtest-4.1.0+dev was launched with 10 total task(s) on 1 node(s)
+Command line used: /root/project/hpc/ior/install/bin/mdtest '-a' 'POSIX' '-z' '0' '-F' '-C' '-r' '-t' '-R' '-i' '1' '-n' '3334' '-e' '4096' '-w' '4096' '-d' '/tmp/sxb/'
+Nodemap: 1111111111
+Path                : /tmp/sxb/
+FS                  : 3.7 GiB   Used FS: 61.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+random seed: 1752827385
+10 tasks, 33340 files
+WARNING: unable to create tree directory '/tmp/sxb/test-dir.0-0/mdtest_tree.0/'
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                2345.219       2345.219       2345.219          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                  899.577        899.577        899.577          0.000
+   Tree creation                1875.807       1875.807       1875.807          0.000
+   Tree removal                   33.993         33.993         33.993          0.000
+-- finished at 07/18/2025 16:30:38 --
 
 
 
