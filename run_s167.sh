@@ -223,3 +223,31 @@ SUMMARY rate (in ops/sec): (of 1 iterations)
 
 root@hpc167:~/project/hpc/ior# 
 
+
+# dir 3 layer
+root@hpc167:~/project/hpc/ior# mpirun -np 10 /root/project/hpc/ior/install/bin/mdtest -a DFS -z 3 -b 3  -F -C -r -t -R -i 1 -n 3334 -e 4096 -w 4096 -d / --dfs.pool sxb --dfs.cont sxb
+-- started at 07/18/2025 18:12:28 --
+
+mdtest-4.1.0+dev was launched with 10 total task(s) on 1 node(s)
+Command line used: /root/project/hpc/ior/install/bin/mdtest '-a' 'DFS' '-z' '3' '-b' '3' '-F' '-C' '-r' '-t' '-R' '-i' '1' '-n' '3334' '-e' '4096' '-w' '4096' '-d' '/' '--dfs.pool' 'sxb' '--dfs.cont' 'sxb'
+Nodemap: 1111111111
+Path                : /
+FS                  : 3.7 GiB   Used FS: 4.4%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+random seed: 1752833548
+10 tasks, 33200 files
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation               12201.401      12201.401      12201.401          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                 6771.567       6771.567       6771.567          0.000
+   Tree creation                1886.967       1886.967       1886.967          0.000
+   Tree removal                 2030.550       2030.550       2030.550          0.000
+-- finished at 07/18/2025 18:12:37 --
+
+root@hpc167:~/project/hpc/ior# 
+
+
+
