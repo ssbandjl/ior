@@ -1,0 +1,696 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jul 19 10:53:02 2025
+Command line        : /root/project/hpc/ior/install/bin/ior -a POSIX -b 4G -t 128M -v -W -w -r -R -i 2 -F -vvv -o /tmp/sxb/testfile
+Machine             : Linux hpc167 5.15.0-139-generic #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025 x86_64
+STARTING ENVIRON LOOP
+SHELL=/bin/bash
+COLORTERM=truecolor
+TERM_PROGRAM_VERSION=1.85.2
+LC_ADDRESS=zh_CN.UTF-8
+LC_NAME=zh_CN.UTF-8
+LC_MONETARY=zh_CN.UTF-8
+PWD=/root/project/hpc/ior
+LOGNAME=root
+XDG_SESSION_TYPE=tty
+VSCODE_GIT_ASKPASS_NODE=/root/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/node
+MOTD_SHOWN=pam
+HOME=/root
+LANG=en_US.UTF-8
+LC_PAPER=zh_CN.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GIT_ASKPASS=/root/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/extensions/git/dist/askpass.sh
+SSH_CONNECTION=10.20.10.215 16508 10.20.10.167 22
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+LC_IDENTIFICATION=zh_CN.UTF-8
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=root
+VSCODE_GIT_IPC_HANDLE=/run/user/0/vscode-git-d3f04facb7.sock
+INCLUDE=/root/project/hpc/mpi/daos/mpich-3.4.3/install/include
+SHLVL=2
+LC_TELEPHONE=zh_CN.UTF-8
+LC_MEASUREMENT=zh_CN.UTF-8
+XDG_SESSION_ID=46
+LD_LIBRARY_PATH=/root/project/hpc/mpi/daos/mpich-3.4.3/install/lib
+XDG_RUNTIME_DIR=/run/user/0
+SSH_CLIENT=10.20.10.215 16508 22
+LC_TIME=zh_CN.UTF-8
+VSCODE_GIT_ASKPASS_MAIN=/root/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/extensions/git/dist/askpass-main.js
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+daospath=/root/project/stor/daos
+BROWSER=/root/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/bin/helpers/browser.sh
+PATH=/root/project/hpc/mpi/daos/mpich-3.4.3/install/bin:/root/project/stor/daos/install/bin/:/root/project/stor/daos/install/sbin:/root/project/hpc/mpi/daos/mpich-3.4.3/install/bin:/root/project/stor/daos/install/bin/:/root/project/stor/daos/install/sbin:/root/.vscode-server/bin/8b3775030ed1a69b13e4f4c628c612102e30a681/bin/remote-cli:/root/project/hpc/mpi/daos/mpich-3.4.3/install/bin:/root/project/stor/daos/install/bin/:/root/project/stor/daos/install/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/usr/local/go/bin:/usr/local/go/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+GO_BIN=/usr/local/go/bin/go
+CPATH=/root/project/stor/daos/install/include/:/root/project/stor/daos/install/include/:/root/project/stor/daos/install/include/:
+LC_NUMERIC=zh_CN.UTF-8
+TERM_PROGRAM=vscode
+VSCODE_IPC_HOOK_CLI=/run/user/0/vscode-ipc-488df0ac-e3ea-4d74-b0c4-ffdfc6220457.sock
+_=/root/project/hpc/mpi/daos/mpich-3.4.3/install/bin/mpirun
+HYDI_CONTROL_FD=7
+GFORTRAN_UNBUFFERED_PRECONNECTED=y
+MPIR_CVAR_CH3_INTERFACE_HOSTNAME=192.168.100.167
+MPI_LOCALNRANKS=1
+MPI_LOCALRANKID=0
+PMI_RANK=0
+PMI_FD=6
+PMI_SIZE=2
+ENDING ENVIRON LOOP
+TestID              : 0
+StartTime           : Sat Jul 19 10:53:02 2025
+	rank 1: sleeping
+Path                : /tmp/sxb/testfile.00000000
+FS                  : 14.9 GiB   Used FS: 2.0%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Parameters: 
+testID              : 0
+refnum              : 0
+api                 : POSIX
+platform            : hpc(Linux)
+testFileName        : /tmp/sxb/testfile
+deadlineForStonewall: 0
+stoneWallingWearOut : 0
+maxTimeDuration     : 0
+outlierThreshold    : 0
+options             : (null)
+dryRun              : 0
+nodes               : 2
+memoryPerTask       : 0
+memoryPerNode       : 0
+tasksPerNode        : 1
+repetitions         : 2
+multiFile           : 0
+interTestDelay      : 0
+fsync               : 0
+fsyncperwrite       : 0
+useExistingTestFile : 0
+uniqueDir           : 0
+singleXferAttempt   : 0
+readFile            : 1
+writeFile           : 1
+filePerProc         : 1
+reorderTasks        : 0
+reorderTasksRandom  : 0
+reorderTasksRandomSeed: 0
+randomOffset        : 0
+checkWrite          : 1
+checkRead           : 1
+dataPacketType      : 0
+keepFile            : 0
+keepFileWithError   : 0
+warningAsErrors     : 0
+verbose             : 4
+data packet type    : g
+setTimeStampSignature/incompressibleSeed: 0
+collective          : 0
+segmentCount        : 1
+transferSize        : 134217728
+blockSize           : 4294967296
+	rank 0: sleeping
+	rank 1: awake.
+	rank 0: awake.
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/sxb/testfile
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 2
+xfersize            : 128 MiB
+blocksize           : 4 GiB
+aggregate filesize  : 8 GiB
+verbose             : 4
+
+Results: 
+Using Time Stamp 1752893587 (0x687b0893) for Data Signature
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+task 0 writing /tmp/sxb/testfile.00000000
+task 1 writing /tmp/sxb/testfile.00000001
+INFO: task 1 writing to offset 0
+, (../../src/aiori-POSIX.c:763).
+Commencing write performance test: Sat Jul 19 10:53:07 2025
+INFO: task 0 writing to offset 0
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 134217728
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 134217728
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 268435456
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 268435456
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 402653184
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 402653184
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 536870912
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 536870912
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 671088640
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 671088640
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 805306368
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 805306368
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 939524096
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 939524096
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1073741824
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1073741824
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1207959552
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1207959552
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1342177280
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1342177280
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1476395008
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1476395008
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1610612736
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1610612736
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1744830464
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1744830464
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1879048192
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1879048192
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2013265920
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2013265920
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2147483648
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2147483648
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2281701376
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2281701376
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2415919104
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2550136832
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2415919104
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2684354560
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2550136832
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2818572288
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2684354560
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2952790016
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2818572288
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3087007744
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2952790016
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3221225472
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3087007744
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3355443200
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3221225472
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3489660928
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3355443200
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3623878656
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3489660928
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3758096384
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3892314112
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3623878656
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 4026531840
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3758096384
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 4160749568
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 3892314112
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 4026531840
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 4160749568
+, (../../src/aiori-POSIX.c:763).
+* data moved = 4294967296
+* data moved = 4294967296
+Test 0: Iter=0, Task=0, Time=1752893587.321935, write open start
+Test 0: Iter=0, Task=0, Time=1752893587.322503, write open stop
+Test 0: Iter=0, Task=0, Time=1752893587.322519, write start
+Test 0: Iter=0, Task=0, Time=1752893598.796295, write stop
+Test 0: Iter=0, Task=0, Time=1752893598.796295, write close start
+Test 0: Iter=0, Task=0, Time=1752893598.796384, write close stop
+write     713.23     5.57       Test 0: Iter=0, Task=1, Time=1752893587.310574, write open start
+Test 0: Iter=0, Task=1, Time=1752893587.311001, write open stop
+Test 0: Iter=0, Task=1, Time=1752893587.311002, write start
+Test 0: Iter=0, Task=1, Time=1752893598.784897, write stop
+Test 0: Iter=0, Task=1, Time=1752893598.784897, write close start
+Test 0: Iter=0, Task=1, Time=1752893598.784997, write close stop
+0.358555    4194304    131072     0.011929   11.49      0.011487   11.49      0   
+Verifying contents of the file(s) just written.
+Sat Jul 19 10:53:19 2025
+
+INFO: task 0 reading from offset 0
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 0
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 134217728
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 134217728
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 268435456
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 268435456
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 402653184
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 402653184
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 536870912
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 536870912
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 671088640
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 671088640
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 805306368
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 805306368
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 939524096
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 939524096
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1073741824
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1073741824
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1207959552
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1207959552
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1342177280
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1342177280
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1476395008
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1476395008
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1610612736
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1610612736
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1744830464
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1744830464
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1879048192
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1879048192
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2013265920
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2013265920
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2147483648
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2147483648
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2281701376
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2281701376
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2415919104
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2415919104
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2550136832
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2550136832
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2684354560
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2684354560
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2818572288
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2818572288
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2952790016
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2952790016
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3087007744
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3087007744
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3221225472
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3221225472
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3355443200
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3355443200
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3489660928
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3489660928
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3623878656
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3623878656
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3758096384
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3758096384
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3892314112
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3892314112
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 4026531840
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 4026531840
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 4160749568
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 4160749568
+, (../../src/aiori-POSIX.c:784).
+task 0 reading /tmp/sxb/testfile.00000000
+task 1 reading /tmp/sxb/testfile.00000001
+INFO: task 1 reading from offset 0
+, (../../src/aiori-POSIX.c:784).
+Commencing read performance test: Sat Jul 19 10:53:32 2025
+
+INFO: task 0 reading from offset 0
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 134217728
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 134217728
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 268435456
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 268435456
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 402653184
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 402653184
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 536870912
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 536870912
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 671088640
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 671088640
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 805306368
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 805306368
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 939524096
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 939524096
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1073741824
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1073741824
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1207959552
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1207959552
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1342177280
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1342177280
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1476395008
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1476395008
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1610612736
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1744830464
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1610612736
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 1879048192
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1744830464
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2013265920
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 1879048192
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2147483648
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2013265920
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2281701376
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2147483648
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2415919104
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2281701376
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2550136832
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2415919104
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2684354560
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2550136832
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2818572288
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2684354560
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 2952790016
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2818572288
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3087007744
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3221225472
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 2952790016
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3355443200
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3087007744
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3489660928
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3221225472
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3623878656
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3355443200
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3758096384
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3489660928
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 3892314112
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3623878656
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 4026531840
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3758096384
+, (../../src/aiori-POSIX.c:784).
+INFO: task 1 reading from offset 4160749568
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 3892314112
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 4026531840
+, (../../src/aiori-POSIX.c:784).
+INFO: task 0 reading from offset 4160749568
+, (../../src/aiori-POSIX.c:784).
+Test 0: Iter=0, Task=0, Time=1752893612.271890, read open start
+Test 0: Iter=0, Task=0, Time=1752893612.273174, read open stop
+Test 0: Iter=0, Task=0, Time=1752893612.273193, read start
+Test 0: Iter=0, Task=0, Time=1752893614.140235, read stop
+Test 0: Iter=0, Task=0, Time=1752893614.140235, read close start
+Test 0: Iter=0, Task=0, Time=1752893614.140319, read close stop
+read      4358       34.06      0.058345    4194304    Test 0: Iter=0, Task=1, Time=1752893612.260446, read open start
+Test 0: Iter=0, Task=1, Time=1752893612.261454, read open stop
+Test 0: Iter=0, Task=1, Time=1752893612.261454, read start
+Test 0: Iter=0, Task=1, Time=1752893614.128801, read stop
+Test 0: Iter=0, Task=1, Time=1752893614.128801, read close start
+Test 0: Iter=0, Task=1, Time=1752893614.128911, read close stop
+131072     0.012728   1.88       0.011518   1.88       0   
+task 1 removing /tmp/sxb/testfile.00000001
+task 0 removing /tmp/sxb/testfile.00000000
+remove    -          -          -           -          -          -          -          -          0.000968   0   
+Using Time Stamp 1752893614 (0x687b08ae) for Data Signature
+task 0 writing /tmp/sxb/testfile.00000000
+task 1 writing /tmp/sxb/testfile.00000001
+INFO: task 1 writing to offset 0
+, (../../src/aiori-POSIX.c:763).
+Commencing write performance test: Sat Jul 19 10:53:34 2025
+INFO: task 0 writing to offset 0
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 134217728
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 134217728
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 268435456
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 268435456
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 402653184
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 536870912
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 402653184
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 671088640
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 536870912
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 805306368
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 939524096
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 671088640
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1073741824
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 805306368
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1207959552
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1342177280
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 939524096
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1476395008
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1073741824
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1610612736
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1744830464
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1207959552
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 1879048192
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1342177280
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2013265920
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2147483648
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1476395008
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2281701376
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1610612736
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2415919104
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1744830464
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2550136832
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2684354560
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 1879048192
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2818572288
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2013265920
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 2952790016
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3087007744
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2147483648
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3221225472
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2281701376
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3355443200
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2415919104
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3489660928
+, (../../src/aiori-POSIX.c:763).
+INFO: task 0 writing to offset 2550136832
+, (../../src/aiori-POSIX.c:763).
+INFO: task 1 writing to offset 3623878656
+, (../../src/aiori-POSIX.c:763).
+WARNING: task 1, partial write(), 59768832 of 134217728 bytes at offset 3623878656
+, (../../src/aiori-POSIX.c:808).
+INFO: task 1 writing to offset 3683647488
+, (../../src/aiori-POSIX.c:763).
+WARNING: write(16, 0x7fe34f8ff000, 74448896) failed No space left on device, (../../src/aiori-POSIX.c:777).
+WARNING: task 1, partial write(), -1 of 74448896 bytes at offset 3683647488
+, (../../src/aiori-POSIX.c:808).
+ior: ../../src/aiori-POSIX.c:818: POSIX_Xfer: Assertion `rc >= 0' failed.
+WARNING: task 0, partial write(), 70254592 of 134217728 bytes at offset 2550136832
+, (../../src/aiori-POSIX.c:808).
+INFO: task 0 writing to offset 2620391424
+, (../../src/aiori-POSIX.c:763).
+WARNING: write(26, 0x7f59c42ff000, 63963136) failed No space left on device, (../../src/aiori-POSIX.c:777).
+WARNING: task 0, partial write(), -1 of 63963136 bytes at offset 2620391424
+, (../../src/aiori-POSIX.c:808).
+ior: ../../src/aiori-POSIX.c:818: POSIX_Xfer: Assertion `rc >= 0' failed.
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7427 RUNNING AT 192.168.100.119
+=   EXIT CODE: 134
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@hpc167] HYD_pmcd_pmip_control_cmd_cb (../../../../src/pm/hydra/pm/pmiserv/pmip_cb.c:897): assert (!closed) failed
+[proxy:0:0@hpc167] HYDT_dmxu_poll_wait_for_event (../../../../src/pm/hydra/tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@hpc167] main (../../../../src/pm/hydra/pm/pmiserv/pmip.c:169): demux engine error waiting for event
+[mpiexec@hpc167] HYDT_bscu_wait_for_completion (../../../../src/pm/hydra/tools/bootstrap/utils/bscu_wait.c:73): one of the processes terminated badly; aborting
+[mpiexec@hpc167] HYDT_bsci_wait_for_completion (../../../../src/pm/hydra/tools/bootstrap/src/bsci_wait.c:21): launcher returned error waiting for completion
+[mpiexec@hpc167] HYD_pmci_wait_for_completion (../../../../src/pm/hydra/pm/pmiserv/pmiserv_pmci.c:179): launcher returned error waiting for completion
+[mpiexec@hpc167] main (../../../../src/pm/hydra/ui/mpich/mpiexec.c:326): process manager error waiting for completion

@@ -1,0 +1,4 @@
+ERROR: block size must be a multiple of transfer size, (../../src/ior.c:1512)
+application called MPI_Abort(MPI_COMM_WORLD, -1) - process 0
+ERROR: block size must be a multiple of transfer size, (../../src/ior.c:1512)
+application called MPI_Abort(MPI_COMM_WORLD, -1) - process 1
